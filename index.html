@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f2e8">
+  <meta name="description" content="Una mesa de cálculos simple para el club Entre Líneas.">
+  <title>Mesa de cálculos — Entre Líneas</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Entre Líneas, inicio"><span class="brand-mark" aria-hidden="true">E</span><span>ENTRE LÍNEAS <span class="slash">/</span> HERRAMIENTAS</span></a>
+    <span class="issue">01 <span aria-hidden="true">·</span> MESA DE CÁLCULOS</span>
+  </header>
+  <main id="inicio" class="layout">
+    <aside class="intro">
+      <p class="eyebrow">UN MOMENTO PARA PENSAR</p>
+      <h1>Antes de seguir,<br>probá tu cuenta.</h1>
+      <p class="intro-copy">Una pequeña pausa entre números, ideas y páginas.</p>
+      <div class="rule"></div>
+      <p class="note"><span class="note-mark" aria-hidden="true">✳</span> Potencia usa A y B.<br>Raíz usa solamente A.</p>
+      <p class="note-small">Enter para sumar.<br>Sin conexión, sin distracciones.</p>
+      <span class="folio" aria-hidden="true">E·L &nbsp;—&nbsp; 01</span>
+    </aside>
+    <section class="calculator" aria-labelledby="form-title">
+      <p class="eyebrow section-label">TU CUENTA, PASO A PASO</p>
+      <h2 id="form-title">Elegí dos números</h2>
+      <form id="calculadora" novalidate>
+        <div class="fields">
+          <label for="numero-a"><span class="field-index">A</span>Primer número
+            <input id="numero-a" name="numero-a" type="number" step="any" inputmode="decimal" placeholder="Por ejemplo, 12" autocomplete="off">
+          </label>
+          <label for="numero-b"><span class="field-index">B</span>Segundo número
+            <input id="numero-b" name="numero-b" type="number" step="any" inputmode="decimal" placeholder="Por ejemplo, 3" autocomplete="off">
+          </label>
+        </div>
+        <fieldset class="operations">
+          <legend>Operaciones</legend>
+          <button type="button" data-operacion="sumar">Sumar <span aria-hidden="true">+</span></button>
+          <button type="button" data-operacion="restar">Restar <span aria-hidden="true">−</span></button>
+          <button type="button" data-operacion="multiplicar">Multiplicar <span aria-hidden="true">×</span></button>
+          <button type="button" data-operacion="dividir">Dividir <span aria-hidden="true">÷</span></button>
+          <button type="button" data-operacion="potencia">Potencia <span aria-hidden="true">↗</span></button>
+          <button type="button" data-operacion="raiz">Raíz <span aria-hidden="true">√</span></button>
+        </fieldset>
+        <p class="coming-soon">La potencia usa A y B; la raíz cuadrada usa solamente A.</p>
+        <div class="answer" aria-live="polite" aria-atomic="true">
+          <div><span class="answer-label">RESULTADO</span><output id="resultado" for="numero-a numero-b">—</output></div>
+          <p id="mensaje-error" role="alert"></p>
+        </div>
+        <button id="limpiar" class="clear" type="button">Limpiar <span aria-hidden="true">↺</span></button>
+      </form>
+      <p class="privacy-note"><span aria-hidden="true">○</span> Tus cuentas se quedan en esta página.</p>
+    </section>
+  </main>
+  <footer><span>ENTRE LÍNEAS</span><span>HECHO PARA PENSAR CON CALMA</span></footer>
+</body>
+</html>
